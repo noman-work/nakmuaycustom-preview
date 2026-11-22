@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Custom Muay Thai Equipment - Nak Muay Custom</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#fff}
+#nmw-lc.nmw-lc{--red:#a31210;--green:#1dbf73;--ink:#111;--body:#4a4a4a;--soft:#f6f6f4;--line:#e8e8e4;font-family:Poppins,sans-serif;color:var(--body);line-height:1.7;font-size:16px!important}
+#nmw-lc.nmw-lc *{box-sizing:border-box}
+#nmw-lc.nmw-lc h1,#nmw-lc.nmw-lc h2,#nmw-lc.nmw-lc h3{font-family:Poppins,sans-serif;color:var(--ink);margin:0 0 16px;line-height:1.15;letter-spacing:-.015em;text-transform:none}
+#nmw-lc.nmw-lc h1{font-size:clamp(36px,5.4vw,66px)!important;font-weight:800}
+#nmw-lc.nmw-lc h2{font-size:clamp(26px,3.2vw,40px)!important;font-weight:700}
+#nmw-lc.nmw-lc h3{font-size:clamp(22px,2.4vw,30px)!important;font-weight:700}
+#nmw-lc.nmw-lc p{margin:0 0 14px;font-size:16px!important}
+#nmw-lc.nmw-lc a{text-decoration:none;text-transform:none}
+#nmw-lc.nmw-lc a:focus-visible,#nmw-lc.nmw-lc button:focus-visible{outline:2px solid var(--green);outline-offset:3px}
+#nmw-lc.nmw-lc .red{color:var(--red)}
+#nmw-lc.nmw-lc .wrap{max-width:1450px;margin:0 auto;padding-left:20px;padding-right:20px}
+#nmw-lc.nmw-lc .sec{padding-top:100px;padding-bottom:100px}
+#nmw-lc.nmw-lc .soft{background:var(--soft)}
+
+/* Top bar */
+#nmw-lc.nmw-lc .top{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line)}
+#nmw-lc.nmw-lc .top .wrap{display:flex;align-items:center;justify-content:space-between;height:70px;gap:20px}
+#nmw-lc.nmw-lc .logo{display:flex;align-items:center}
+#nmw-lc.nmw-lc .logo img{height:46px;width:auto;display:block}
+#nmw-lc.nmw-lc .ship{border-bottom:1px solid var(--line)}
+#nmw-lc.nmw-lc .ship .wrap{display:grid;grid-template-columns:1fr 1.3fr;gap:60px;align-items:center;padding-top:56px;padding-bottom:56px}
+#nmw-lc.nmw-lc .ship img{display:block;width:100%;max-width:640px;height:auto;justify-self:end}
+#nmw-lc.nmw-lc .ship h2{margin:0 0 6px}
+#nmw-lc.nmw-lc .ship-link{color:var(--red);font-weight:600;font-size:15px!important;text-decoration:underline!important;text-underline-offset:4px}
+#nmw-lc.nmw-lc .ship-link:hover{color:var(--ink)}
+@media(max-width:849px){#nmw-lc.nmw-lc .ship .wrap{grid-template-columns:1fr;gap:20px;padding-top:44px;padding-bottom:44px}#nmw-lc.nmw-lc .ship img{justify-self:start;order:2}}
+#nmw-lc.nmw-lc .nav{display:flex;align-items:center;gap:28px}
+#nmw-lc.nmw-lc .nav a{color:var(--ink);font-weight:500;font-size:15px!important}
+#nmw-lc.nmw-lc .nav a:hover{color:var(--red)}
+
+/* Buttons: red = start an order, outline = look at templates */
+#nmw-lc.nmw-lc .btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+#nmw-lc.nmw-lc .btn{display:inline-flex;align-items:center;padding:15px 26px;border-radius:6px;font-weight:600;font-size:15px!important;transition:background .2s,color .2s,box-shadow .2s;cursor:pointer;border:0;font-family:inherit}
+#nmw-lc.nmw-lc .btn-main{background:var(--red);color:#fff}
+#nmw-lc.nmw-lc .btn-main:hover{background:#7f0e0c;color:#fff}
+#nmw-lc.nmw-lc .btn-line{color:var(--ink);background:transparent;box-shadow:inset 0 0 0 1.5px var(--ink)}
+#nmw-lc.nmw-lc .btn-line:hover{background:var(--ink);color:#fff}
+#nmw-lc.nmw-lc .nav .btn{padding:10px 18px;color:#fff}
+
+/* Hero */
+#nmw-lc.nmw-lc .hero .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:70px;align-items:center;padding-top:70px;padding-bottom:90px}
+#nmw-lc.nmw-lc .lead{font-size:19px!important;color:#2a2a2a}
+#nmw-lc.nmw-lc .hero-img{border-radius:4px;overflow:hidden;aspect-ratio:4/4.4;background:var(--soft)}
+#nmw-lc.nmw-lc .hero-img img{width:100%;height:100%;object-fit:cover;display:block}
+
+/* Order terms band (signature: the big MOQ numbers) */
+#nmw-lc.nmw-lc .facts{background:var(--ink);color:#cfcfcf}
+#nmw-lc.nmw-lc .facts .wrap{display:grid;grid-template-columns:1fr 1.6fr;gap:70px;align-items:end;padding-top:70px;padding-bottom:70px}
+#nmw-lc.nmw-lc .facts p{margin:0;font-size:16px!important}
+#nmw-lc.nmw-lc .facts .hl{display:block;color:#fff;font-weight:600;font-size:20px!important;line-height:1.4;margin-bottom:10px}
+#nmw-lc.nmw-lc .moq-h{color:#fff;font-size:15px!important;font-weight:600;margin-bottom:18px}
+#nmw-lc.nmw-lc .moq{display:grid;grid-template-columns:repeat(3,1fr)}
+#nmw-lc.nmw-lc .moq div{padding:0 24px;border-left:1px solid #333}
+#nmw-lc.nmw-lc .moq div:first-child{padding-left:0;border-left:0}
+#nmw-lc.nmw-lc .moq b{display:block;font-size:clamp(48px,6vw,88px)!important;font-weight:800;line-height:.95;color:#fff;font-variant-numeric:tabular-nums;margin-bottom:10px}
+#nmw-lc.nmw-lc .moq span{display:block;font-size:14px!important;line-height:1.35;color:#cfcfcf}
+
+/* Included */
+#nmw-lc.nmw-lc .inc{display:grid;grid-template-columns:1fr 1.4fr;gap:70px}
+#nmw-lc.nmw-lc .inc h3{margin-bottom:14px}
+#nmw-lc.nmw-lc .feats{list-style:none;margin:0;padding:0}
+#nmw-lc.nmw-lc .feats li{margin:0;padding:20px 0;border-bottom:1px solid var(--line);font-size:18px!important;font-weight:600;color:var(--ink);display:flex;gap:16px;align-items:center}
+#nmw-lc.nmw-lc .feats li:first-child{padding-top:0}
+#nmw-lc.nmw-lc .feats li:before{content:"";flex:0 0 22px;height:22px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231dbf73' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 12l5 5L20 6'/%3E%3C/svg%3E") center/22px no-repeat}
+
+/* Steps (real sequence) */
+#nmw-lc.nmw-lc .steps{list-style:none;margin:40px 0 0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:32px}
+#nmw-lc.nmw-lc .steps>li{margin:0;padding-top:20px;border-top:2px solid var(--ink);font-size:15px!important;line-height:1.6}
+#nmw-lc.nmw-lc .steps>li>i{font-style:normal;width:36px;height:36px;border-radius:50%;background:var(--green);color:#fff;font-weight:700;font-size:15px!important;display:grid;place-items:center;margin-bottom:14px}
+#nmw-lc.nmw-lc .steps>li>b{color:var(--ink);font-size:17px!important}
+#nmw-lc.nmw-lc .sub{list-style:none;margin:10px 0 0;padding:0}
+#nmw-lc.nmw-lc .sub li{margin:0;padding:8px 0 0;font-size:14px!important;line-height:1.5}
+#nmw-lc.nmw-lc .sub b{color:var(--ink)}
+
+/* Templates */
+#nmw-lc.nmw-lc .t-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:30px}
+#nmw-lc.nmw-lc .t-head h2{margin:0}
+#nmw-lc.nmw-lc .tabs{display:flex;gap:4px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:4px}
+#nmw-lc.nmw-lc .tab{padding:10px 18px;border-radius:5px;border:0;background:transparent;font-family:inherit;font-weight:600;font-size:14px!important;color:var(--ink);cursor:pointer;text-transform:none;letter-spacing:0}
+#nmw-lc.nmw-lc .tab[aria-selected="true"]{background:var(--ink);color:#fff}
+#nmw-lc.nmw-lc .tlist{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;column-gap:60px;border-top:1px solid #d9d9d4}
+#nmw-lc.nmw-lc .tlist[hidden]{display:none}
+#nmw-lc.nmw-lc .tlist li{margin:0;border-bottom:1px solid #d9d9d4}
+#nmw-lc.nmw-lc .tlist a{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:18px 0;color:var(--ink);font-weight:600;font-size:16px!important}
+#nmw-lc.nmw-lc .tlist a span{flex:0 0 auto;display:inline-flex;align-items:center;gap:8px;color:var(--red);font-size:14px!important}
+#nmw-lc.nmw-lc .tlist a span svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+#nmw-lc.nmw-lc .tlist a:hover span{color:var(--ink)}
+#nmw-lc.nmw-lc .tlist a:hover{color:var(--red)}
+
+/* Form */
+#nmw-lc.nmw-lc .form-sec .wrap{display:grid;grid-template-columns:1fr 1.3fr;gap:70px;align-items:start}
+#nmw-lc.nmw-lc .form-side{position:sticky;top:110px}
+#nmw-lc.nmw-lc .form{background:#fff;border:1px solid var(--line);border-radius:10px;padding:40px;scroll-margin-top:100px}
+
+#nmw-lc.nmw-lc .ff{display:flex;flex-direction:column;gap:18px}
+#nmw-lc.nmw-lc .ff label,#nmw-lc.nmw-lc .ff legend{display:flex;flex-direction:column;gap:7px;font-weight:600;color:var(--ink);font-size:15px!important;padding:0}
+#nmw-lc.nmw-lc .ff i{font-style:normal;color:var(--red)}
+#nmw-lc.nmw-lc .ff-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+#nmw-lc.nmw-lc .ff input[type=text],#nmw-lc.nmw-lc .ff input[type=email],#nmw-lc.nmw-lc .ff select,#nmw-lc.nmw-lc .ff textarea{width:100%;font:inherit;font-weight:400;font-size:15px!important;color:var(--ink);background:#fff;border:1px solid #cfcfca;border-radius:6px;padding:12px 14px}
+#nmw-lc.nmw-lc .ff input:focus,#nmw-lc.nmw-lc .ff select:focus,#nmw-lc.nmw-lc .ff textarea:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px rgba(29,191,115,.18)}
+#nmw-lc.nmw-lc .ff fieldset{border:0;margin:0;padding:0}
+#nmw-lc.nmw-lc .ff-checks{display:flex;flex-wrap:wrap;gap:10px 24px;margin-top:8px}
+#nmw-lc.nmw-lc .ff .ck{flex-direction:row;align-items:center;gap:8px;font-weight:400}
+#nmw-lc.nmw-lc .ff .ck input{width:18px;height:18px;accent-color:var(--green)}
+#nmw-lc.nmw-lc .ff-file{border:1px dashed #cfcfca;border-radius:6px;padding:12px 14px;font-weight:400}
+#nmw-lc.nmw-lc .ff-submit{align-self:flex-start;font-size:16px!important;padding:15px 34px}
+#nmw-lc.nmw-lc .ff-ok{margin:0;color:var(--green);font-weight:600}
+@media(max-width:849px){#nmw-lc.nmw-lc .ff-row{grid-template-columns:1fr}#nmw-lc.nmw-lc .ff-submit{align-self:stretch;justify-content:center}}
+
+/* Footer */
+#nmw-lc.nmw-lc .foot{background:var(--ink);color:#a8a8a8;font-size:14px!important}
+#nmw-lc.nmw-lc .foot .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;padding-top:28px;padding-bottom:28px}
+#nmw-lc.nmw-lc .foot a{color:#e0e0e0}
+#nmw-lc.nmw-lc .foot a:hover{color:var(--green)}
+
+@media(prefers-reduced-motion:reduce){#nmw-lc.nmw-lc *{transition:none!important;scroll-behavior:auto!important}}
+@media(max-width:1199px){
+ #nmw-lc.nmw-lc .steps{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:849px){
+ #nmw-lc.nmw-lc .sec{padding-top:60px;padding-bottom:60px}
+ #nmw-lc.nmw-lc .nav a:not(.btn){display:none}
+ #nmw-lc.nmw-lc .hero .wrap,#nmw-lc.nmw-lc .facts .wrap,#nmw-lc.nmw-lc .inc,#nmw-lc.nmw-lc .form-sec .wrap{grid-template-columns:1fr;gap:32px}
+ #nmw-lc.nmw-lc .hero .wrap{padding-top:20px;padding-bottom:56px}
+ #nmw-lc.nmw-lc .facts .wrap{padding-top:50px;padding-bottom:50px}
+ #nmw-lc.nmw-lc .hero-img{order:-1;aspect-ratio:4/3}
+ #nmw-lc.nmw-lc h1{font-size:36px!important}
+ #nmw-lc.nmw-lc .lead{font-size:17px!important}
+ #nmw-lc.nmw-lc .hero .btn{flex:1 1 auto;justify-content:center}
+ #nmw-lc.nmw-lc .moq div{padding:0 12px}
+ #nmw-lc.nmw-lc .moq b{font-size:44px!important}
+ #nmw-lc.nmw-lc .moq span{font-size:12px!important}
+ #nmw-lc.nmw-lc .feats li{font-size:16px!important;padding:16px 0}
+ #nmw-lc.nmw-lc .steps{grid-template-columns:1fr;gap:0}
+ #nmw-lc.nmw-lc .steps>li{display:grid;grid-template-columns:36px 1fr;column-gap:16px;padding:18px 0;border-top:1px solid var(--line)}
+ #nmw-lc.nmw-lc .steps>li>i{grid-row:span 3;margin:0}
+ #nmw-lc.nmw-lc .tabs{width:100%}
+ #nmw-lc.nmw-lc .tab{flex:1}
+ #nmw-lc.nmw-lc .tlist{grid-template-columns:1fr}
+ #nmw-lc.nmw-lc .tlist a{font-size:15px!important;padding:15px 0}
+ #nmw-lc.nmw-lc .form-side{position:static}
+ #nmw-lc.nmw-lc .form{padding:22px}
+}
+</style>
+</head>
+<body>
+<div class="nmw-lc" id="nmw-lc">
+
+ <!-- Top bar (ADDED) -->
+ <header class="top">
+  <div class="wrap">
+   <a class="logo" href="#"><img src="https://www.nakmuaywholesale.com/wp-content/uploads/2017/10/logo-medium-e1549892859890.png" alt="Nak Muay Wholesale"></a>
+   <nav class="nav">
+    <a href="#how">How to Order</a>
+    <a href="#templates">Templates</a>
+    <a class="btn btn-main" href="#custom-form">Fill the Form</a>
+   </nav>
+  </div>
+ </header>
+
+ <!-- Hero (text 1:1 from /custom-muay-thai-gear/) -->
+ <section class="hero">
+  <div class="wrap">
+   <div>
+    <h1>Custom Muay Thai <span class="red">Equipment</span></h1>
+    <p class="lead">We offer premium custom Muay Thai shorts 100% unique and designed by you! Get your whole team fight-ready in matching custom shorts for your gym.</p>
+    <p>Handmade in Thailand by master tailors, our shorts are crafted for the perfect fit and feel. Choose from a wide range of styles and inspirations, with easy-to-use templates for full customization.</p>
+    <div class="btns">
+     <a class="btn btn-main" href="#custom-form">Fill the Form</a>
+     <a class="btn btn-line" href="#templates">View Custom Gear Template</a>
+    </div>
+   </div>
+   <div class="hero-img">
+    <img src="https://www.nakmuaywholesale.com/wp-content/uploads/2026/11/muay-thai-shorts-quality-inspection.jpg" alt="Custom Muay Thai shorts quality inspection">
+   </div>
+  </div>
+ </section>
+
+ <!-- Order terms -->
+ <section class="facts">
+  <div class="wrap">
+   <p><span class="hl">A 50% deposit is required before production begins.</span>Production lead time is 5 weeks, with updates provided via picture and video before shipping.</p>
+   <div>
+    <div class="moq-h">Minimum Order Quantity</div>
+    <div class="moq">
+     <div><b>30</b><span>Shorts</span></div>
+     <div><b>2</b><span>Walkout Jackets</span></div>
+     <div><b>2</b><span>Cornermen Jackets</span></div>
+    </div>
+   </div>
+  </div>
+ </section>
+
+ <!-- Express Worldwide shipping (ADDED section; heading from user's words, link text added.
+      TODO: shipping copy (days / carriers) to be supplied; site numbers disagree (2–4 vs 2–5 days), so none shown) -->
+ <section class="ship">
+  <div class="wrap">
+   <div>
+    <h2>Express Worldwide shipping</h2>
+    <a class="ship-link" href="https://www.nakmuaywholesale.com/shipping-policy/" target="_blank" rel="noopener">Read the Shipping Policy</a>
+   </div>
+   <img src="https://www.nakmuaywholesale.com/wp-content/uploads/2026/10/EXPRESS-WORLDWIDE.svg" alt="Express Worldwide" loading="lazy">
+  </div>
+ </section>
+
+ <!-- Included -->
+ <section class="sec">
+  <div class="wrap inc">
+   <div>
+    <h3>The ultimate creative experience includes:</h3>
+    <p>Looking for a complete custom Muay Thai kit? We also offer Fighter Walkout Jackets and Custom Cornermen Jackets to match your shorts.</p>
+   </div>
+   <ul class="feats">
+    <li>Custom waistband logo &amp; patch design</li>
+    <li>High-quality fabrics: nylon, premium satin, and microfiber</li>
+    <li>Expert embroidery &amp; sublimation</li>
+   </ul>
+  </div>
+ </section>
+
+ <!-- How to order -->
+ <section class="sec soft" id="how">
+  <div class="wrap">
+   <h3>How to Order Custom Muay Thai Shorts for Your Gym:</h3>
+   <ol class="steps">
+    <li><i>1</i><b>Select Your Style</b>: Browse our collection of Muay Thai short patterns. These patterns show the cut of the shorts; you will design the rest! Download one of our PDF templates below.</li>
+    <li><i>2</i><b>Get Creative</b>: There are two ways to complete your template:
+     <ol class="sub">
+      <li><b>By hand:</b> Print the template and sketch your design.</li>
+      <li><b>In Photoshop</b> or other preferred apps: Our templates are easy to import for digital design.</li>
+     </ol>
+    </li>
+    <li><i>3</i><b>Specify Details</b>: On the template, indicate your quantity and any other details needed for production.</li>
+    <li><i>4</i><b>Submit Your Design</b>: Fill out the form below and attach your completed design.</li>
+    <li><i>5</i><b>Receive Your Quotation</b>: Our team will review your design and send you a price quote.</li>
+   </ol>
+  </div>
+ </section>
+
+ <!-- Templates (names + PDFs 1:1 from /custom-gear-template/).
+      TODO: template preview images. Only DCMTS#1 has a known image URL, so thumbnails are left out until all 17 are supplied. -->
+ <section class="sec" id="templates">
+  <div class="wrap">
+   <div class="t-head">
+    <h2 id="tpl-title">Custom Muay Thai SHORTS TEMPLATES</h2>
+    <div class="tabs" role="tablist">
+     <button class="tab" role="tab" aria-selected="true" data-t="shorts" data-h="Custom Muay Thai SHORTS TEMPLATES">Shorts</button>
+     <button class="tab" role="tab" aria-selected="false" data-t="vests" data-h="Walkout jacket &amp; trainer's vest">Walkout jacket &amp; vest</button>
+    </div>
+   </div>
+   <ul class="tlist" data-g="shorts"></ul>
+   <ul class="tlist" data-g="vests" hidden></ul>
+  </div>
+ </section>
+
+ <!-- Form -->
+ <section class="sec soft form-sec">
+  <div class="wrap">
+   <div class="form-side">
+    <h2>Fill the Form</h2>
+    <div class="btns">
+     <a class="btn btn-line" href="#templates">View Custom Gear Template</a>
+    </div>
+   </div>
+   <div class="form" id="custom-form">
+    <!-- Static copy of Fluent Form #7 for client preview. In WordPress use [fluentform id="7"] -->
+    <form class="ff" onsubmit="event.preventDefault();this.querySelector('.ff-ok').hidden=false;">
+     <div class="ff-row">
+      <label>First Name <i>*</i><input type="text" name="first_name" placeholder="First Name" required></label>
+      <label>Last Name <i>*</i><input type="text" name="last_name" placeholder="Last Name" required></label>
+     </div>
+     <label>Email <i>*</i><input type="email" name="email" placeholder="Email Address" required></label>
+     <label>Business Name  <i>*</i><input type="text" name="business" placeholder="Business Name" required></label>
+     <fieldset><legend>Type of Business <i>*</i></legend>
+      <span class="ff-checks"><label class="ck"><input type="checkbox" name="type[]" value="Gym "> Gym </label><label class="ck"><input type="checkbox" name="type[]" value="Store"> Store</label><label class="ck"><input type="checkbox" name="type[]" value="Brand"> Brand</label><label class="ck"><input type="checkbox" name="type[]" value="Other "> Other </label></span>
+     </fieldset>
+     <label>Country <i>*</i><select name="country" required><option value="">Select Country</option><option value='AF'>Afghanistan</option><option value='AX'>Aland Islands</option><option value='AL'>Albania</option><option value='DZ'>Algeria</option><option value='AS'>American Samoa</option><option value='AD'>Andorra</option><option value='AO'>Angola</option><option value='AI'>Anguilla</option><option value='AQ'>Antarctica</option><option value='AG'>Antigua and Barbuda</option><option value='AR'>Argentina</option><option value='AM'>Armenia</option><option value='AW'>Aruba</option><option value='AU'>Australia</option><option value='AT'>Austria</option><option value='AZ'>Azerbaijan</option><option value='BS'>Bahamas</option><option value='BH'>Bahrain</option><option value='BD'>Bangladesh</option><option value='BB'>Barbados</option><option value='BY'>Belarus</option><option value='BE'>Belgium</option><option value='BZ'>Belize</option><option value='BJ'>Benin</option><option value='BM'>Bermuda</option><option value='BT'>Bhutan</option><option value='BO'>Bolivia</option><option value='BQ'>Bonaire, Saint Eustatius and Saba</option><option value='BA'>Bosnia and Herzegovina</option><option value='BW'>Botswana</option><option value='BV'>Bouvet Island</option><option value='BR'>Brazil</option><option value='IO'>British Indian Ocean Territory</option><option value='VG'>British Virgin Islands</option><option value='BN'>Brunei</option><option value='BG'>Bulgaria</option><option value='BF'>Burkina Faso</option><option value='BI'>Burundi</option><option value='CV'>Cabo Verde</option><option value='KH'>Cambodia</option><option value='CM'>Cameroon</option><option value='CA'>Canada</option><option value='KY'>Cayman Islands</option><option value='CF'>Central African Republic</option><option value='TD'>Chad</option><option value='CL'>Chile</option><option value='CN'>China</option><option value='CX'>Christmas Island</option><option value='CC'>Cocos (Keeling) Islands</option><option value='CO'>Colombia</option><option value='KM'>Comoros</option><option value='CK'>Cook Islands</option><option value='CR'>Costa Rica</option><option value='HR'>Croatia</option><option value='CU'>Cuba</option><option value='CW'>Curaçao</option><option value='CY'>Cyprus</option><option value='CZ'>Czech Republic</option><option value='CD'>Democratic Republic of the Congo (Kinshasa)</option><option value='DK'>Denmark</option><option value='DJ'>Djibouti</option><option value='DM'>Dominica</option><option value='DO'>Dominican Republic</option><option value='EC'>Ecuador</option><option value='EG'>Egypt</option><option value='SV'>El Salvador</option><option value='GQ'>Equatorial Guinea</option><option value='ER'>Eritrea</option><option value='EE'>Estonia</option><option value='SZ'>Eswatini</option><option value='ET'>Ethiopia</option><option value='FK'>Falkland Islands</option><option value='FO'>Faroe Islands</option><option value='FJ'>Fiji</option><option value='FI'>Finland</option><option value='FR'>France</option><option value='GF'>French Guiana</option><option value='PF'>French Polynesia</option><option value='TF'>French Southern Territories</option><option value='GA'>Gabon</option><option value='GM'>Gambia</option><option value='GE'>Georgia</option><option value='DE'>Germany</option><option value='GH'>Ghana</option><option value='GI'>Gibraltar</option><option value='GR'>Greece</option><option value='GL'>Greenland</option><option value='GD'>Grenada</option><option value='GP'>Guadeloupe</option><option value='GU'>Guam</option><option value='GT'>Guatemala</option><option value='GG'>Guernsey</option><option value='GN'>Guinea</option><option value='GW'>Guinea-Bissau</option><option value='GY'>Guyana</option><option value='HT'>Haiti</option><option value='HM'>Heard Island and McDonald Islands</option><option value='HN'>Honduras</option><option value='HK'>Hong Kong</option><option value='HU'>Hungary</option><option value='IS'>Iceland</option><option value='IN'>India</option><option value='ID'>Indonesia</option><option value='IR'>Iran</option><option value='IQ'>Iraq</option><option value='IE'>Ireland</option><option value='IM'>Isle of Man</option><option value='IL'>Israel</option><option value='IT'>Italy</option><option value='CI'>Ivory Coast</option><option value='JM'>Jamaica</option><option value='JP'>Japan</option><option value='JE'>Jersey</option><option value='JO'>Jordan</option><option value='KZ'>Kazakhstan</option><option value='KE'>Kenya</option><option value='KI'>Kiribati</option><option value='XK'>Kosovo</option><option value='KW'>Kuwait</option><option value='KG'>Kyrgyzstan</option><option value='LA'>Laos</option><option value='LV'>Latvia</option><option value='LB'>Lebanon</option><option value='LS'>Lesotho</option><option value='LR'>Liberia</option><option value='LY'>Libya</option><option value='LI'>Liechtenstein</option><option value='LT'>Lithuania</option><option value='LU'>Luxembourg</option><option value='MO'>Macao S.A.R., China</option><option value='MG'>Madagascar</option><option value='MW'>Malawi</option><option value='MY'>Malaysia</option><option value='MV'>Maldives</option><option value='ML'>Mali</option><option value='MT'>Malta</option><option value='MH'>Marshall Islands</option><option value='MQ'>Martinique</option><option value='MR'>Mauritania</option><option value='MU'>Mauritius</option><option value='YT'>Mayotte</option><option value='MX'>Mexico</option><option value='FM'>Micronesia</option><option value='MD'>Moldova</option><option value='MC'>Monaco</option><option value='MN'>Mongolia</option><option value='ME'>Montenegro</option><option value='MS'>Montserrat</option><option value='MA'>Morocco</option><option value='MZ'>Mozambique</option><option value='MM'>Myanmar</option><option value='NA'>Namibia</option><option value='NR'>Nauru</option><option value='NP'>Nepal</option><option value='NL'>Netherlands</option><option value='NC'>New Caledonia</option><option value='NZ'>New Zealand</option><option value='NI'>Nicaragua</option><option value='NE'>Niger</option><option value='NG'>Nigeria</option><option value='NU'>Niue</option><option value='NF'>Norfolk Island</option><option value='KP'>North Korea</option><option value='MK'>North Macedonia</option><option value='MP'>Northern Mariana Islands</option><option value='NO'>Norway</option><option value='OM'>Oman</option><option value='PK'>Pakistan</option><option value='PW'>Palau</option><option value='PS'>Palestinian Territory</option><option value='PA'>Panama</option><option value='PG'>Papua New Guinea</option><option value='PY'>Paraguay</option><option value='PE'>Peru</option><option value='PH'>Philippines</option><option value='PN'>Pitcairn</option><option value='PL'>Poland</option><option value='PT'>Portugal</option><option value='PR'>Puerto Rico</option><option value='QA'>Qatar</option><option value='CG'>Republic of the Congo (Brazzaville)</option><option value='RO'>Romania</option><option value='RU'>Russia</option><option value='RW'>Rwanda</option><option value='RE'>Réunion</option><option value='BL'>Saint Barthélemy</option><option value='SH'>Saint Helena</option><option value='KN'>Saint Kitts and Nevis</option><option value='LC'>Saint Lucia</option><option value='SX'>Saint Martin (Dutch part)</option><option value='MF'>Saint Martin (French part)</option><option value='PM'>Saint Pierre and Miquelon</option><option value='VC'>Saint Vincent and the Grenadines</option><option value='WS'>Samoa</option><option value='SM'>San Marino</option><option value='ST'>Sao Tome and Principe</option><option value='SA'>Saudi Arabia</option><option value='SN'>Senegal</option><option value='RS'>Serbia</option><option value='SC'>Seychelles</option><option value='SL'>Sierra Leone</option><option value='SG'>Singapore</option><option value='SK'>Slovakia</option><option value='SI'>Slovenia</option><option value='SB'>Solomon Islands</option><option value='SO'>Somalia</option><option value='ZA'>South Africa</option><option value='GS'>South Georgia/Sandwich Islands</option><option value='KR'>South Korea</option><option value='SS'>South Sudan</option><option value='ES'>Spain</option><option value='LK'>Sri Lanka</option><option value='SD'>Sudan</option><option value='SR'>Suriname</option><option value='SJ'>Svalbard and Jan Mayen</option><option value='SE'>Sweden</option><option value='CH'>Switzerland</option><option value='SY'>Syria</option><option value='TW'>Taiwan</option><option value='TJ'>Tajikistan</option><option value='TZ'>Tanzania</option><option value='TH'>Thailand</option><option value='TL'>Timor-Leste</option><option value='TG'>Togo</option><option value='TK'>Tokelau</option><option value='TO'>Tonga</option><option value='TT'>Trinidad and Tobago</option><option value='TN'>Tunisia</option><option value='TM'>Turkmenistan</option><option value='TC'>Turks and Caicos Islands</option><option value='TV'>Tuvalu</option><option value='TR'>Türkiye</option><option value='UG'>Uganda</option><option value='UA'>Ukraine</option><option value='AE'>United Arab Emirates</option><option value='GB'>United Kingdom (UK)</option><option value='US'>United States (US)</option><option value='UM'>United States (US) Minor Outlying Islands</option><option value='VI'>United States (US) Virgin Islands</option><option value='UY'>Uruguay</option><option value='UZ'>Uzbekistan</option><option value='VU'>Vanuatu</option><option value='VA'>Vatican</option><option value='VE'>Venezuela</option><option value='VN'>Vietnam</option><option value='WF'>Wallis and Futuna</option><option value='EH'>Western Sahara</option><option value='YE'>Yemen</option><option value='ZM'>Zambia</option><option value='ZW'>Zimbabwe</option></select></label>
+     <label>Share Your Customization Details<textarea name="description" rows="5" placeholder="Indicate the sizes and quantities needed for your order (e.g., M = 15, XL = 20, etc.)."></textarea></label>
+     <label> Upload Template <span class="ff-file"><input type="file" name="file-upload" multiple></span></label>
+     <button type="submit" class="btn btn-main ff-submit">Request Quote</button>
+     <p class="ff-ok" hidden>Preview only — this form is not connected yet.</p>
+    </form>
+   </div>
+  </div>
+ </section>
+
+ <!-- Footer (ADDED) -->
+ <footer class="foot">
+  <div class="wrap">
+   <span>© 2026 Nak Muay Custom</span>
+   <a href="https://www.nakmuaywholesale.com/" target="_blank" rel="noopener">nakmuaywholesale.com</a>
+  </div>
+ </footer>
+
+ <script>
+ (function(){
+  var U='https://www.nakmuaywholesale.com/wp-content/uploads/2026/08/';
+  var T={
+   shorts:[
+    ['Diamond Cut Muay Shorts DCMTS#1','1.Daimon-cut-No.1.pdf'],
+    ['Retro Muay Shorts RMTS#1','5.Retro-No.1.pdf'],
+    ['Standard Muay Shorts SMTS#1','7.Standard-No.1.pdf'],
+    ['High Cut Diamond Shorts HCDMTS#2','2.Daimond-cut-No.2.pdf'],
+    ['Retro Muay Thai Shorts RMTS#2','6.Retro-No.2.pdf'],
+    ['High Cut Diamond Shorts HCDMTS#1','3.Daimond-cut-No.3.pdf'],
+    ['High Cut Diamond Shorts HCDMTS#3','4.Daimond-cut-No.2.pdf'],
+    ['Standard Muay Thai Shorts SMTS#4','10.Standard-No.4.pdf'],
+    ['Standard Muay Shorts SMTS#3','9.Standard-No.3.pdf'],
+    ['Standard Muay Shorts SMTS#2','8.Standard-No.2.pdf']
+   ],
+   vests:[
+    ['Hooded Fighter walkout Vest HFWJ#2','13.walk-out-vest-No.3.pdf'],
+    ['Collared Muay ThaiVestCFWJ#2','12.walk-out-vest-No.2.pdf'],
+    ['Hooded Fighter walkout Vest HFWJ#1','11.walk-out-vest-No.1.pdf'],
+    ['Classic Trainer’s VestCTVDP#1','14.walk-out-vest-No.4.pdf'],
+    ['Muay ThaiVestNCFWJ#1','16.walk-out-vest-No.6.pdf'],
+    ['Collared Muay ThaiVestCFWJ#1','15.walk-out-vest-No.5.pdf'],
+    ['Classic Trainer Vest Single Pocket CTVSP#1','17.walk-out-vest-No.7.pdf']
+   ]
+  };
+  var dl='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>';
+  Object.keys(T).forEach(function(k){
+   document.querySelector('#nmw-lc .tlist[data-g="'+k+'"]').innerHTML=T[k].map(function(t){
+    return '<li><a href="'+U+t[1]+'" target="_blank" rel="noopener">'+t[0]+'<span>'+dl+'Download Template</span></a></li>';
+   }).join('');
+  });
+  var tabs=document.querySelectorAll('#nmw-lc .tab');
+  tabs.forEach(function(b){b.addEventListener('click',function(){
+   tabs.forEach(function(x){x.setAttribute('aria-selected',x===b)});
+   document.querySelectorAll('#nmw-lc .tlist').forEach(function(g){g.hidden=g.dataset.g!==b.dataset.t});
+   document.getElementById('tpl-title').innerHTML=b.dataset.h;
+  })});
+  var rm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll('#nmw-lc a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){
+   var h=a.getAttribute('href');if(h==='#')return;var t=document.querySelector(h);if(!t)return;e.preventDefault();
+   window.scrollTo({top:t.getBoundingClientRect().top+pageYOffset-90,behavior:rm?'auto':'smooth'});
+  })});
+ })();
+ </script>
+</div>
+</body>
+</html>
